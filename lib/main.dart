@@ -95,6 +95,7 @@ class BreadCrumbsWidget extends StatelessWidget {
             child: Text(
               breadCrumb.title,
               style: TextStyle(
+                fontSize: 18,
                 color: breadCrumb.isActive ? Colors.blue : Colors.black,
               ),
             ),
@@ -116,7 +117,9 @@ class HomePage extends StatelessWidget {
       ),
       body: SafeArea(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
+            const SizedBox(height: 10),
             Consumer<BreadCrumbProvider>(builder: (context, value, child) {
               return BreadCrumbsWidget(
                 // onTapped: ((p0) {
@@ -125,17 +128,24 @@ class HomePage extends StatelessWidget {
                 breadCrumbs: value.items,
               );
             }),
+            const SizedBox(height: 20),
             TextButton(
               onPressed: () {
                 Navigator.of(context).pushNamed('/new');
               },
-              child: const Text("Add New Bread Crumb"),
+              child: const Text(
+                "Add New Bread Crumb",
+                style: TextStyle(fontSize: 20),
+              ),
             ),
             TextButton(
               onPressed: () {
                 context.read<BreadCrumbProvider>().reset();
               },
-              child: const Text("Reset"),
+              child: const Text(
+                "Reset",
+                style: TextStyle(fontSize: 20),
+              ),
             ),
           ],
         ),
@@ -205,9 +215,14 @@ class ExpPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: const Text("Experimenting")),
       body: SafeArea(
-          child: Container(
-        color: Colors.teal.shade400,
-        child: const Text("Exp Page"),
+          child: Center(
+        child: Container(
+          color: Colors.teal.shade400,
+          child: const Text(
+            "Exp Page",
+            style: TextStyle(fontSize: 20),
+          ),
+        ),
       )),
     );
   }

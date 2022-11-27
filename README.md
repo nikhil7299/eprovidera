@@ -4,6 +4,9 @@ A new Flutter project.
 
 ## Getting Started
 
+<img src="output1.png" alt="output1" width="200"/> <p>     </p> <img src="output2.png" alt="output2" width="200"/> <p>     </p> 
+<img src="output3.png" alt="output3" width="200"/>
+
 This project is a starting point for a Flutter application.
 
 A few resources to get you started if this is your first Flutter project:
